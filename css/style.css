@@ -1,0 +1,49 @@
+/* reset */
+* {margin: 0; padding: 0; font-size: 16px; font-family: 'KoPubWorld돋움체_Pro','Arial';}
+a {color: #ffffff; text-decoration: none;}
+li {list-style: none;}
+.clearfix::before, .clearfix::after {content: ''; display: block; clear: both;}
+
+/* warp */
+#warp {width: 1000px; margin: 0 auto;}
+
+/* header */
+#header h1 {float: left; padding: 15px 18px; }
+#header h1 img {width: 230px;}
+#header .nav {float: right; background: transparent; margin-top: 20px;}
+#header .nav li {position: relative; float: left; width: 190px; text-align: center; }
+#header .nav li a {display: block; font-size: 20px; color: #3c3cbf; font-weight: 600; padding: 24px 20px 20px 20px; }
+#header .nav li a:hover {background: transparent; }
+#header .nav li ul.submenu {display: none; position: absolute; left: 0; top: px; z-index: 100; margin-top:2px; }
+#header .nav li ul.submenu li a {font-size: 17px; font-weight: 400;  color: #3c3cbf;; padding: 15px; background: #fff; border: none; border-top-style: solid; border-top-color: #3c3cbf; border-top-width: 0px; }
+#header .nav li ul.submenu li a:hover {background: #3c3cbf; color: #fff;}
+
+/* banner */
+#banner {height: 389px; overflow: hidden;}
+#banner img {width: 100%; display: block;}
+
+/* 좌우 */
+.slidelist {position: relative; width: 3000px; z-index: 50;}
+.slidelist .slideImg {position: relative; width: 1000px; float: left;}
+
+
+/* 명언 및 문구 */
+#contents {margin-top: 20px; height: 128px;}
+#contents img {width: 100%;}
+
+/* 목업 */
+#mockup {margin-top: 0px; margin-bottom: px;}
+.best figure {float: left; width: 32%; margin-right: 2%;}
+.best figure img{width: 100%; margin-top: 19px; border-bottom-style: solid; border-bottom-width: 0.5px; border-bottom-color: #aaa;}
+.best figure figcaption{color: #aaa; text-align: center; margin-top: 8px;}
+.best figure:last-child{margin-right: 0;}
+
+/* footer */
+#footer {padding: 20px 0; background: ; margin-top: 50px; border-top-style: solid; border-top-color: #aaa; border-top-width: 2px;}
+#footer h2 {float: left; padding-left: 20px;}
+#footer h2 img {width: 150px;}
+#footer .foot {float: right; padding-right: 30px;}
+#footer .foot ul {padding-bottom: 10px;}
+#footer .foot ul li {display: inline;}
+#footer .foot ul li a {color: #000; padding-right: 10px;}
+#footer .foot address {font-style: normal; color: #aaa;}

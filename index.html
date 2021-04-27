@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Blaze Up!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="warp">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="images/logo.png" alt="Blaze Up"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix"> 
+                    <li><a href="#">Info</a>
+                        <ul class="submenu"> 
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">License</a></li>
+                            <li><a href="#">Award</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="#">Work</a>
+                        <ul class="submenu"> 
+                            <li><a href="#">UX/UI</a></li>
+                            <li><a href="#">Poster</a></li>
+                            <li><a href="#">Motion Graphic</a></li>
+                            <li><a href="#">Album Cover</a></li>
+                            <li><a href="#">Logo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a>
+                        <ul class="submenu"> 
+                            <li><a href="#">Tel</a></li>
+                            <li><a href="#">E-mail</a></li>
+                            <li><a href="https://www.instagram.com/iamstaa">Instagram</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </nav>    
+        </header> 
+        <!--//header-->
+        <section id="banner">
+            <div class="slidelist">
+                <div class="slideImg">
+                    <img src="images/banner01.jpg" alt="이벤트1">
+                </div>
+                <div class="slideImg">
+                    <img src="images/banner02.jpg" alt="이벤트2">
+                </div>
+                <div class="slideImg">
+                    <img src="images/banner03.jpg" alt="이벤트3">
+                </div>
+            </div>
+        </section>
+        <!--//banner-->
+    <section id="contents">
+        <img src="images/contents.jpg">
+    </section>
+    <!--//contents-->
+    <section id="mockup">
+        <div class="best clearfix">
+            <figure>
+                <img src="images/01.jpg" alt="자유">
+                <figcaption>새소년 자유 앨범커버</figcaption>
+            </figure>
+            <figure>
+                <img src="images/02.jpg" alt="지니뮤직">
+                <figcaption>지니뮤직 로고 리디자인</figcaption>
+            </figure>
+            <figure>
+                <img src="images/03.jpg" alt="포스터">
+                <figcaption>영화 포스터 디자인</figcaption>
+            </figure>
+        </div>
+        <div class="best clearfix">
+            <figure>
+                <img src="images/04.jpg" alt="자유">
+                <figcaption>유네스코 등재 촉구 카드뉴스</figcaption>
+            </figure>
+            <figure>
+                <img src="images/05.jpg" alt="자유">
+                <figcaption>명함 디자인</figcaption>
+            </figure>
+            <figure>
+                <img src="images/06.jpg" alt="자유">
+                <figcaption>잡지 디자인</figcaption>
+            </figure>
+        </div>
+        </section>
+        <!--//mockup-->
+        <footer id="footer" class="clearfix">
+            <h2><img src="images/gray%20logo.png" alt="blaze up"></h2>
+            <div class="foot">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자 정보확인</a></li>
+                </ul>
+                <address>
+                    한강미디어고등학교 웹미디어콘텐츠과<br>
+                    주소: 서울특별시 영등포구 선유로55길 22 5층
+                </address>
+            </div>    
+        </footer>
+        <!--footer-->
+    </div>
+    <!--warp-->
+    <!--script-->
+    <script src="script/custom.js"></script>
+    <script src="script/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //네비게이션
+        $(".nav > ul > li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown(200);
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        });
+        
+        //이미지 슬라이드(좌우)
+        var currentIndex = 0;
+        
+        setInterval(function(){
+            if(currentIndex < 2){
+                currentIndex++;
+            } else{
+                currentIndex = 0;
+            }
+            var slidePosition =currentIndex * (-1000)+"px";
+            $(".slidelist").animate({ left:slidePosition },400);
+        },3000);
+    </script>
+    </body>
+</html>
